@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
     <title>Программа Кэт Энерджи</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -45,7 +45,7 @@
         <p class="form__text">
           Заполните анкету и мы подберем программу питания для вашего кота
         </p>
-        <div class="form__list-wrapper">
+        <div class="form__list--wrapper">
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label">Имя:*
@@ -66,17 +66,17 @@
           <ul class="form__list form__list--goal">
             <li class="form__item">
               <label class="form__label--goal">Похудение
-                <input class="form__input--radio" type="radio" placeholder="Барсик" name="mass" value="mass-down" checked>
+                <input class="form__input--radio" type="radio" name="mass" value="mass-down" checked>
               </label>
             </li>
             <li class="form__item">
               <label class="form__label--goal">Набор массы
-                <input class="form__input--radio" type="radio" placeholder="Барсик" name="mass" value="mass-up">
+                <input class="form__input--radio" type="radio" name="mass" value="mass-up">
               </label>
             </li>
             <li class="form__item">
               <label class="form__label--goal">Не знаю (нужен ваш совет)
-                <input class="form__input--radio" type="radio" placeholder="Барсик" name="mass" value="mass-advice">
+                <input class="form__input--radio" type="radio" name="mass" value="mass-advice">
               </label>
             </li>
           </ul>
@@ -87,12 +87,12 @@
           </h2>
           <ul class="form__list form__list--contacts">
             <li class="form__item">
-              <label class="form__label form__label--email">E-mail:*
+              <label class="form__label--contacts form__label--email">E-mail:*
                 <input class="form__input--text" type="email" placeholder="kuklachev@gmail.com" name="email" required>
               </label>
             </li>
             <li class="form__item">
-              <label class="form__label form__label--phone">Телефон:*
+              <label class="form__label--contacts form__label--phone">Телефон:*
                 <input class="form__input--text" type="tel" placeholder="8 (960) 900-60-90" name="phone" required>
               </label>
             </li>

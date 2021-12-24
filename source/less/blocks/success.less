@@ -1,3 +1,10 @@
+.success__wrapper {
+    @media (min-width: @desktop-width) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 .success__title {
     font-size: 36px;
     font-weight: 400;
@@ -10,6 +17,15 @@
     font-weight: 400;
     line-height: 18px;
     color: @special_dark_grey;
+}
+
+.success__timeline {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .success__list {

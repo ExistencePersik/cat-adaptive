@@ -1,5 +1,16 @@
 .catalog-features__list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: @desktop-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 // .catalog-features__item {

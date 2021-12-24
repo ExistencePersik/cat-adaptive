@@ -6,6 +6,14 @@
 
 .features__list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .features__description {

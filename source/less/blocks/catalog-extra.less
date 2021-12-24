@@ -1,6 +1,12 @@
-// .catalog-extra {
+.catalog-extra__wrapper {
+    display: flex;
+    flex-direction: column;
     
-// }
+    @media (min-width: @desktop-width) {
+        display: flex;
+        flex-direction: row;
+    }
+}
 
 .catalog-extra__title {
     font-size: 16px;
@@ -18,9 +24,16 @@
     list-style: none;
 }
 
-// .catalog-extra__item {
+.catalog-extra__item {
+    display: flex;
+    flex-wrap: wrap;
 
-// }
+    @media (min-width: @desktop-width) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
 
 .catalog-extra__count {
     font-family: Arial, sans-serif;

@@ -1,16 +1,106 @@
+.program {
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(/img/index-background-mobile@1x.jpg);
+    background-size: contain;
+    background-position: top center;
+    padding: 0 20px;
+    @media (min-resolution: 2dppx) {
+        background-image: url(/img/index-background-mobile@2x.jpg);
+    }
+    @media (min-width: @tablet-width) {
+        height: 755px;
+        padding: 0 30px;
+        background-repeat: no-repeat;
+        background-image: url(/img/index-can-tablet@1x.jpg);
+        background-size: 609px auto;
+        background-position: bottom center;
+        @media (min-resolution: 2dppx) {
+            background-image: url(/img/index-can-tablet@2x.jpg);
+        }
+    }
+    @media (min-width: @desktop-width) {
+        height: none;
+        padding: 0 110px;
+        padding-top: 27px;
+        background-repeat: no-repeat;
+        background-image: url(/img/index-background-desktop@1x.jpg);
+        background-size: contain;
+        background-position: right;
+        @media (min-resolution: 2dppx) {
+            background-image: url(/img/index-background-desktop@2x.jpg);
+        }
+    }
+}
+
 .program__title {
     font-size: 36px;
     font-weight: 400;
     line-height: 36px;
+    margin: 0;
+    padding: 27px 0;
+    text-align: center;
+    color: @white;
+    @media (min-width: @tablet-width) {
+        padding: 21px 0px 45px 87px;
+        font-size: 60px;
+        line-height: 60px;
+        text-align: left;
+        color: @black;
+    }
+    @media (min-width: @desktop-width) {
+        padding: 196px 0px 45px 80px;
+    }
 }
 
 .program__slogan {
     font-size: 14px;
     line-height: 14px;
+    margin: 0;
+    padding-bottom: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @white;
+    @media (min-width: @tablet-width) {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 0px 0px 67px 87px;
+        text-align: left;
+        color: @black;
+    }
+    @media (min-width: @desktop-width) {
+        padding: 0px 0px 67px 80px;
+    }
 }
 
-.program__link-button {
+.program__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: @tablet-width) {
+        display: none;
+    }
+    @media (min-width: @desktop-width) {
+        display: block;
+        position: absolute;
+        top: 143px;
+        right: 330px;
+    }
+}
+
+.program__link-button { 
     font-size: 14px;
     line-height: 18px;
-    color: @black; //white
+    text-transform: uppercase;
+    color: @white; 
+    @media (min-width: @tablet-width) {
+        display: initial;
+        margin-left: 87px;
+        padding: 18px 27px;
+        font-size: 20px;
+        line-height: 0px;
+    }
+    @media (min-width: @desktop-width) {
+        margin-left: 80px;
+    }
 }

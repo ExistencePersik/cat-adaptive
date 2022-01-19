@@ -9,31 +9,33 @@
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="/img/logo-mobile.svg" width="191" height="38" alt="Функциональное питание для котов «Кэт Энерджи»">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg"> 
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__img" src="/img/logo-mobile.svg" width="192" height="66" alt="Функциональное питание для котов «Кэт Энерджи»">
+        </picture>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
         </nav>
     </header>
 
@@ -133,7 +135,7 @@
           </ul>
         </fieldset>
         <div class="form__button-wrapper">
-          <button class="form__button">
+          <button class="form__button button">
             Отправить заявку
           </button>
           <small class="form__extra-legend">* — Обязательные поля</small>
@@ -186,5 +188,22 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed'); 
+        navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 </body>
 </html>

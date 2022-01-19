@@ -1,25 +1,94 @@
-.main-nav__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.main-nav {
+    width: auto;
 }
 
-@media (min-width: @tablet-width) {
-    .main-nav {
-        display: flex;
-        flex-direction: row;
-    }
-    .main-nav__wrapper {
-        display: flex;
-        justify-content: space-between;
-        width: 440px;
+
+.main-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2px;
+    @media (min-width: @tablet-width) {
         margin: 0 auto;
+        margin-right: 31px;
+        margin-top: 36px;
     }
-    .main-nav__list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 440px;
+    @media (min-width: @desktop-width) {
         margin: 0 auto;
+        margin-right: 112px;
+        margin-top: 36px;
     }
+}
+
+.main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 65px;
+    height: 65px;
+    background-color: @white;
+    cursor: pointer;
+    border: none;
+
+    @media (min-width: @tablet-width) {
+        display: none;
+    }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 
+        0 8px 0 0 @black, 
+        0 16px 0 0 @black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+    background-color: fade(@black, 30%);
+    box-shadow: 
+        0 8px 0 0 fade(@black, 30%),
+        0 16px 0 0 fade(@black, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 34px;
+        left: 20px;
+        width: 25px;
+        height: 2px;
+        background-color: @black;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+        background-color: fade(@black, 30%);
+    }
+}
+
+@media (max-width: @mobile-width-only) {
+    .main-nav--closed .site-list__item {
+        display: none;
+    }
+}
+
+.main-nav--nojs .main-nav__toggle {
+    display: none;
 }

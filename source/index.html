@@ -8,13 +8,13 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg"> 
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__img" src="/img/logo-mobile.svg" width="192" height="66" alt="Функциональное питание для котов «Кэт Энерджи»">
-        </picture>
-      </a>
+      <a class="page-header__logo" target="_self" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg"> 
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__img" src="/img/logo-mobile.svg" width="192" height="66" alt="Функциональное питание для котов «Кэт Энерджи»">
+          </picture>
+        </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -53,12 +53,12 @@
           <img class="program__img" src="/img/index-can-mobile@1x.png"srcset="/img/index-can-mobile@2x.png 2x" alt="Пример продукции «Кэт Энерджи»">
         </picture>
         <a class="program__link-button button" href="selection.html">
-          Подобрать программу
+          <span class="button__text">Подобрать программу</span>
         </a>
       </section>
       <section class="categories">
         <div class="categories__wrapper">
-          <h2 class="categories__title">
+          <h2 class="categories__title categories__title--1">
             Похудение
           </h2>
           <p class="categories__description">
@@ -70,7 +70,7 @@
           </a>
         </div>
         <div class="categories__wrapper">
-          <h2 class="categories__title">
+          <h2 class="categories__title categories__title--2">
             Набор массы
           </h2>
           <p class="categories__description">
@@ -140,44 +140,57 @@
                 </li>
               </ul>
               <p class="success__price">
-                Затраты на питание: 15 000 руб.
+                <span>Затраты на питание:</span>
+                <span>15 000 руб.</span>
               </p>
             </div>
           </div>
-          <div class="success__column-wrappper">
-            <div class="">
-              <!-- пикчи кота -->
+          <div class="success__column-wrapper">
+            <div class="success__image">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x"> 
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x"> 
+                <img class="success__img success__img--before success__img--show" src="/img/before-mobile@1x.png"srcset="/img/before-mobile@2x.png 2x" alt="Каким кот был">
+              </picture>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x"> 
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x"> 
+                <img class="success__img success__img--after" src="/img/after-mobile@1x.png"srcset="/img/after-mobile@2x.png 2x" alt="Каким кот стал">
+              </picture>
             </div>
-            <ul class="">
-              <li>
-                <!-- было -->
-              </li>
-              <li>
-                <!-- полоска -->
-              </li>
-              <li>
-                <!-- стало -->
-              </li>
-            </ul>
+            <div class="success__buttons-wrapper">
+              <button class="success__button success__button--before">
+                Было
+              </button>
+              <div class="success__progress">
+                <input type="range" min="1" max="100" value="50" class="success__range">
+                <div class="success__progress-toggle"></div>
+              </div>
+              <button class="success__button success__button--after">
+                Стало
+              </button>
+            </div>
           </div>
         </div>
+        <div class="success__background"></div>
       </section>
       </main>
 
       <footer class="page-footer">
         <section class="page-footer__contacts contacts">
           <div class="contacts__header">
-            <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+            <b class="contacts__title">Приглашаем<br>к сотрудничеству <br>дилеров!</b>
             <p class="contacts__text">
-              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+              <span>ул. Большая Конюшенная, д. 19/8</span>
+              <span>Санкт-Петербург</span>
             </p>
           </div>
-          <div class="contacts__map">
-            <div>
-              <img src="/img/bg-map-mobile@2x.png" width="320" height="362" alt="Карта">
-            </div>
-          </div>
         </section>
+        <div class="contacts__map">
+          <div>
+            <img src="/img/bg-map-mobile@2x.png" width="320" height="362"alt="Карта">
+          </div>
+        </div>
         <a class="page-footer__logo">
           <img src="/img/logo-footer.svg" width="320" height="95" alt="Функциональное питание для котов «Кэт Энерджи»">
         </a>

@@ -1,23 +1,23 @@
 .page-header {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: space-between;
-
-    @media (min-width: @tablet-width) {
-        flex-direction: row;
-    }
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding-top: 27px;
+  }
+  &--index {
     @media (min-width: @desktop-width) {
-        position: absolute;
-        z-index: 30;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding-top: 27px;
-    }
-
-    
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 0;
+  }
+  }
 }
 
 

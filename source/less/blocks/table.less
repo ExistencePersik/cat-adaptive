@@ -1,6 +1,10 @@
-// .table__row {
-
-// }
+.table {
+  border-collapse: collapse;
+    @media (min-width: @tablet-width) {
+      margin-top: 21px;
+      margin-bottom: 33px;
+  }
+}
 
 .table__cell {
     font-family: Arial, sans-serif;
@@ -8,4 +12,12 @@
     font-weight: 400;
     line-height: 16px;
     color: @special_dark_grey;
+    &:last-child {
+      text-align: right;
+    }
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      height: 25px;
+      border-bottom: 1px solid @special_grey;
+    }
 }

@@ -1,7 +1,10 @@
 .catalog-features {
   padding: 0 20px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
   @media (min-width: @tablet-width) {
     padding: 0 30px;
+    border: none;
   }
   @media (min-width: @desktop-width) {
     padding: 0 110px;
@@ -18,9 +21,24 @@
     @media (min-width: @tablet-width) {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-gap: 59px;
+        justify-items: center;
     }
     @media (min-width: @desktop-width) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+.catalog-features__item {
+  padding-top: 19px;
+  padding-bottom: 25px;
+  border-top: 1px solid #ededed;
+  &:first-child {
+    border: none;
+  }
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0px 38px 40px;
+  }
 }

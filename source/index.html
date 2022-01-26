@@ -49,8 +49,10 @@
           Занялся собой? Займись котом!
         </p>
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
-          <img class="program__img" src="/img/index-can-mobile@1x.png"srcset="/img/index-can-mobile@2x.png 2x" alt="Пример продукции «Кэт Энерджи»">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, /img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="/img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, /img/index-can-desktop@2x.png 2x">
+          <img class="program__img" src="/img/index-can-mobile@1x.png"srcset="img/index-can-mobile@2x.png 2x" alt="Пример продукции «Кэт Энерджи»">
         </picture>
         <a class="program__link-button button" href="selection.html">
           <span class="button__text">Подобрать программу</span>
@@ -148,14 +150,20 @@
           <div class="success__column-wrapper">
             <div class="success__image">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="success__img success__img--before success__img--show" src="/img/before-mobile@1x.png"srcset="/img/before-mobile@2x.png 2x" alt="Каким кот был">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, /img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, /img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, /img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, /img/before-tablet@2x.png 2x">
+                <img class="success__img success__img--before success__img--show" src="/img/before-mobile@1x.png"srcset="img/before-mobile@2x.png 2x" alt="Каким кот был">
               </picture>
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img class="success__img success__img--after" src="/img/after-mobile@1x.png"srcset="/img/after-mobile@2x.png 2x" alt="Каким кот стал">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, /img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, /img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, /img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, /img/after-tablet@2x.png 2x">
+                <img class="success__img success__img--after" src="/img/after-mobile@1x.png"srcset="img/after-mobile@2x.png 2x" alt="Каким кот стал">
               </picture>
             </div>
             <div class="success__buttons-wrapper">
@@ -190,7 +198,7 @@
 
         </div>
         <div class="page-footer__wrapper">
-          <a class="page-footer__logo">
+          <a class="page-footer__logo" href="#">
             <img src="/img/logo-footer.svg" width="128"height="24"   alt="Функциональное питание для котов«Кэт Энерджи»">
           </a>
           <ul class="page-footer__list">

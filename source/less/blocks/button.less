@@ -1,16 +1,18 @@
 .button {
-    display: block;
-    text-align: center;
-    background-color: @basic_green;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    &:hover {
-        background-color: @basic_green_2;
-    }
+  display: block;
+  text-align: center;
+  background-color: @basic_green;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 0px;
+  text-transform: uppercase;
+  color: @white;
+  &:hover {
+      background-color: @basic_green_2;
+  }
 }
 
-.button__text {
-    &:active {
-        opacity: 0.3;
-    }
+.button:active .button__text {
+  opacity: 0.3;
 }

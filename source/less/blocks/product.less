@@ -1,25 +1,93 @@
 .product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  @media (min-width: @tablet-width) {
     display: flex;
-    flex-direction: row;
-
-    @media (min-width: @tablet-width) {
-        display: flex;
-        flex-direction: column;;
-    }
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    background: linear-gradient(to top, @basic_grey 85%, @white 15%);
+  }
 }
 
-// .product__link {
-
-// }
+.product__link {
+  grid-column-start: span 2;
+}
 
 .product__title {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: @special_dark_grey_2;
+  width: 76px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @special_dark_grey_2;
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    margin: 0 auto;
+    width: 124px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
-// .product__decription {
+.product__info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
-// }
+.product__show-more {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.product__text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: @special_dark_grey;
+  margin: 0;
+}
+
+.product__more-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 0px;
+  color: @special_dark_grey;
+  background-color: @basic_grey;
+  align-self: normal;
+    &:hover {
+      background-color: @special_grey_2;
+  }
+}
+
+.product__more-list {
+  height: 158px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.product__plus-mobile {
+  width: 30px;
+  height: 30px;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.product__plus {
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+}

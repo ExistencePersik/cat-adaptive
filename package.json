@@ -36,5 +36,22 @@
   ],
   "engines": {
     "node": "12.18.2"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "copy-props": "^3.0.1",
+    "deep-extend": "^0.6.0",
+    "hosted-git-info": "^4.1.0",
+    "http-proxy": "^1.18.1",
+    "ini": "^2.0.0",
+    "lodash": "^4.17.21",
+    "merge": "^2.1.1",
+    "object-path": "^0.11.8",
+    "socket.io": "^4.4.1",
+    "trim": "^1.0.1",
+    "ua-parser-js": "^1.0.2",
+    "xmlhttprequest-ssl": "^2.0.0",
+    "y18n": "^5.0.8",
+    "yargs-parser": "^21.0.0"
   }
 }

@@ -50,35 +50,44 @@
         <div class="form__list--wrapper">
           <ul class="form__list">
             <li class="form__item">
-              <label class="form__label">Имя:*
+              <label class="form__label">
+                <span class="form__label-name">Имя:*</span>
                 <input class="form__input--text" type="text" placeholder="Барсик" name="name" required="">
               </label>
             </li>
             <li class="form__item">
-              <label class="form__label">Вес (кг):*
+              <label class="form__label">
+                <span class="form__label-name">Вес (кг):*</span>
                 <input class="form__input--text" type="text" placeholder="7" name="cat-weight" required="">
               </label>
             </li>
             <li class="form__item">
-              <label class="form__label">Возраст (лет):
+              <label class="form__label">
+                <span class="form__label-name">Возраст (лет):</span>
                 <input class="form__input--text" type="text" placeholder="7" name="age">
               </label>
             </li>
           </ul>
           <ul class="form__list form__list--goal">
-            <li class="form__item">
-              <label class="form__label--goal">Похудение
-                <input class="form__input--radio" type="radio" name="mass" value="mass-down" checked>
+            <li class="form__item form__item--radio">
+              <label class="form__label--goal">
+                <input class="form__input form__input--radio" type="radio" name="mass" value="mass-down" checked>
+                <span class="form__radio"></span>
+                Похудение
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__label--goal">Набор массы
-                <input class="form__input--radio" type="radio" name="mass" value="mass-up">
+            <li class="form__item form__item--radio">
+              <label class="form__label--goal">
+                <input class="form__input form__input--radio" type="radio" name="mass" value="mass-up">
+                <span class="form__radio"></span>
+                Набор массы
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__label--goal">Не знаю (нужен ваш совет)
-                <input class="form__input--radio" type="radio" name="mass" value="mass-advice">
+            <li class="form__item form__item--radio">
+              <label class="form__label--goal">
+                <input class="form__input form__input--radio" type="radio" name="mass" value="mass-advice">
+                <span class="form__radio"></span>
+                Не знаю (нужен ваш совет)
               </label>
             </li>
           </ul>
@@ -89,13 +98,26 @@
           </h2>
           <ul class="form__list form__list--contacts">
             <li class="form__item">
-              <label class="form__label--contacts form__label--email">E-mail:*
+              <label class="form__label form__label--email">
+                <span class="form__label-name">E-mail:*</span>
                 <input class="form__input--text" type="email" placeholder="kuklachev@gmail.com" name="email" required>
+                <svg class="form__label-icon" width="18" height="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
+                  <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+                </svg>
               </label>
             </li>
             <li class="form__item">
-              <label class="form__label--contacts form__label--phone">Телефон:*
+              <label class="form__label form__label--phone">
+                <span class="form__label-name">Телефон:*</span>
                 <input class="form__input--text" type="tel" placeholder="8 (960) 900-60-90" name="phone" required>
+                <svg class="form__label-icon" width="20" height="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                  <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                  <path
+                    d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                  c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                  C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                  C7.8,20,8.1,19.7,8.1,19.4z"/>
+                </svg>
               </label>
             </li>
           </ul>
@@ -105,31 +127,39 @@
             Комментарий
           </h2>
           <textarea class="form__textarea" placeholder="Расскажите обо всех повадках кота"
-          name="comments" style="margin: 0px 0px 5px; width: 1049px; height: 175px;"></textarea>
+          name="comments"></textarea>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--extra">
           <h2 class="form__legend form__legend--extra">
             Дополнительно
           </h2>
           <ul class="form__list form__list--extra">
-            <li class="form__item">
-              <label class="form__label--extra form__checkbox">Сахарозаменитель
-                <input class="form__input--checkbox" type="checkbox" name="sweetener" checked>
+            <li class="form__item form__item--checkbox">
+              <label class="form__label--extra">
+                <input class="form__input form__input--checkbox" type="checkbox" name="sweetener" checked>
+                <span class="form__checkbox"></span>
+                Сахарозаменитель
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__label--extra form__checkbox">Питьевая вода
-                <input class="form__input--checkbox" type="checkbox" name="water">
+            <li class="form__item form__item--checkbox">
+              <label class="form__label--extra">
+                <input class="form__input form__input--checkbox" type="checkbox" name="water">
+                <span class="form__checkbox"></span>
+                Питьевая вода
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__label--extra form__checkbox">Молоко
-                <input class="form__input--checkbox" type="checkbox" name="milk">
+            <li class="form__item form__item--checkbox">
+              <label class="form__label--extra">
+                <input class="form__input form__input--checkbox" type="checkbox" name="milk">
+                <span class="form__checkbox"></span>
+                Молоко
               </label>
             </li>
-            <li class="form__item">
-              <label class="form__label--extra form__checkbox">Витамины
-                <input class="form__input--checkbox" type="checkbox" name="supps">
+            <li class="form__item form__item--checkbox">
+              <label class="form__label--extra">
+                <input class="form__input form__input--checkbox" type="checkbox" name="supps">
+                <span class="form__checkbox"></span>
+                Витамины
               </label>
             </li>
           </ul>
@@ -144,7 +174,7 @@
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__contacts contacts">
+      <section class="page-footer__contacts page-footer__contacts--extra contacts">
         <div class="contacts__header">
           <b class="contacts__title">Приглашаем<br>к сотрудничеству <br>дилеров!</b>
           <p class="contacts__text">
@@ -154,7 +184,7 @@
         </div>
       </section>
       <div class="page-footer__map">
-
+        <iframe class="page-footer__map--iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad68be9c70d738842dd1b391600667cfe65d998a17240dddfaaa72677b8aaf841&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>
       </div>
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="#">

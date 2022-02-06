@@ -9,7 +9,9 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
-const ghPages = require('gulp-gh-pages');
+const ghPages = require("gulp-gh-pages");
+const uglify = require("gulp-uglify");
+const htmlmin = require("gulp-htmlmin");
 
 // Images
 
@@ -59,6 +61,27 @@ const styles = () => {
 
 exports.styles = styles;
 
+// JSmin
+
+const uglifyJS = () => {
+  return gulp.src("source/js/*.js")
+  .pipe(uglify())
+  .pipe(gulp.dest('build/js'))
+};
+
+exports.uglifyJS = uglifyJS;
+
+
+// HTMLmin
+
+const html = () => {
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({ collapseWhitespace: true}))
+  .pipe(gulp.dest('build'))
+};
+
+exports.html = html;
+
 // Copy
 
 const copy = () => {
@@ -101,6 +124,8 @@ var build = gulp.series(
   clean,
   copy,
   styles,
+  uglifyJS,
+  html,
   images
 );
 
